@@ -2,6 +2,8 @@
 #include <iostream>
 #include <cstdlib>
 #include <math.h>
+#include <limits> 
+
 
 using namespace std;
 
@@ -29,23 +31,23 @@ int main(int argc, char** argv) {
   	 
   	 // to use loop to cheak input voltage value 
   	 
-    while(input_voltage <=0){
-    	
-    printf("error  not valid value , please rinsert input voltage\n\n");
-    
-    cin >> input_voltage ;
+		 while (cin.fail() || input_voltage <= 0) {
+    cin.clear(); // reset error 
+   cin.ignore(numeric_limits<streamsize>::max(), '\n'); // clean  buffer
+
+    cin >> input_voltage;
     
 	}
 	
 	  printf("Acquiring data from the notebook column \n\n");
 	  
-    for(i = 0; i <= 21; i = i + 1) {
+    for(i = 0; i <= 20; i = i + 1) {
     	
         cin >> vmax_notebook_column[i];
         cout << "\n";
     }
     
-    for(i = 0; i <= 21; i = i + 1) {
+    for(i = 0; i <= 20; i = i + 1) {
     	
         x = 20 * log10(vmax_notebook_column[i] / input_voltage);
         cout << "\n";
