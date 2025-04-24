@@ -1,7 +1,6 @@
-
 # CLI Scripts
 
-A collection of C++ command-line tools for automating common system tasks and calculations. These scripts enable users to manage directories, perform system diagnostics, and calculate decibel values from input voltages.
+A collection of C++ and Python command-line tools for automating common system tasks and calculations. These scripts enable users to manage directories, perform system diagnostics, and calculate decibel values from input voltages.
 
 ## Table of Contents
 
@@ -11,6 +10,7 @@ A collection of C++ command-line tools for automating common system tasks and ca
 - [Usage Instructions](#usage-instructions)
   - [Compilation Instructions](#compilation-instructions)
   - [Python Setup](#python-setup)
+    - [Decibel Calculation (Python Version)](#decibel-calculation-python-version)
 - [License](#license)
 - [Troubleshooting](#troubleshooting)
 
@@ -18,11 +18,13 @@ A collection of C++ command-line tools for automating common system tasks and ca
 
 ## Project Overview
 
-This repository contains several C++ command-line scripts designed to perform the following tasks:
+This repository contains several command-line scripts designed to perform the following tasks:
 
-1. **Folder Creation Script**: Automatically creates a specified number of folders in the current directory.
-2. **CMD Automation Script**: Provides a set of network-related and system diagnostics commands (e.g., cleaning temp files, displaying network parameters, pinging websites, viewing active connections, and displaying system info).
-3. **Decibel Calculation Script**: Calculates decibel (dB) values for a set of voltage readings based on a reference voltage.
+1. **Folder Creation Script** (C++): Automatically creates a specified number of folders in the current directory.
+2. **CMD Automation Script** (C++): Provides a set of network-related and system diagnostics commands (e.g., cleaning temp files, displaying network parameters, pinging websites, viewing active connections, and displaying system info).
+3. **Decibel Calculation Script**:
+   - **C++ Version**: Calculates decibel (dB) values for a set of voltage readings based on a reference voltage.
+   - **Python Version**: A Python alternative for calculating decibel values from a set of input voltages, with similar functionality and output format.
 
 These scripts integrate with Python for ASCII art in the terminal, providing a visually appealing interface.
 
@@ -30,35 +32,37 @@ These scripts integrate with Python for ASCII art in the terminal, providing a v
 
 ## Features
 
-### 1. Folder Creation Script
+### 1. Folder Creation Script (C++)
 - Allows users to specify the number of folders to create (named `Folder_1`, `Folder_2`, ..., `Folder_n`).
 - Prints success messages in green and error messages in red.
 
-### 2. CMD Automation Script
+### 2. CMD Automation Script (C++)
 - Provides a menu-driven interface to select from five system management tasks:
   1. **Clean Temporary Files**: Wipes out system temp files.
   2. **Network Interface Information**: Displays network adapter settings.
   3. **Ping Command**: Pings a specified domain multiple times.
   4. **Active Connections**: Displays statistics for active network connections.
   5. **System Info**: Outputs detailed system information.
-  
-### 3. Decibel Calculation Script
-- Computes the decibel (dB) values for a set of voltages using the formula:
+
+### 3. Decibel Calculation Script (C++ & Python)
+- **C++ Version**: Computes the decibel (dB) values for a set of voltages using the formula:
   \[
   \text{dB} = 20 \times \log_{10} \left(\frac{V_{\text{max}}}{V_{\text{input}}}\right)
   \]
-- Prompts the user for a reference voltage, then processes 21 voltage values to calculate and display corresponding dB values.
+  Prompts the user for a reference voltage, then processes 21 voltage values to calculate and display corresponding dB values.
+
+- **Python Version**: The Python script offers the same functionality as the C++ script but can be easily executed on systems with Python installed. The Python version prompts for the reference voltage and calculates the dB values for a set of voltages, outputting the result in a user-friendly format with ASCII art.
 
 ---
 
 ## Requirements
 
 ### Software
-- **C++ Compiler**: The scripts are written in C++ and require a C++ compiler to compile and run (e.g., GCC, MinGW, or MSVC).
+- **C++ Compiler** (for C++ scripts): The scripts are written in C++ and require a C++ compiler to compile and run (e.g., GCC, MinGW, or MSVC).
 - **Dev C++ 5.11**: An Integrated Development Environment (IDE) for C++ development, which includes a built-in GCC compiler. You can use Dev C++ 5.11 to compile and run these scripts.
   - **Download Dev C++ 5.11**: [Dev C++ Official Website](https://www.bloodshed.net/devcpp.html)
   - After installing Dev C++ 5.11, you can compile the scripts by opening them within the IDE, then clicking **Execute > Compile & Run**.
-- **Python**: Required for displaying ASCII art using the `pyfiglet` library.
+- **Python**: Required for displaying ASCII art using the `pyfiglet` library and running the Python version of the Decibel Calculation script.
   - **Python Installation**:
     - Download and install Python from the official website: [Python.org](https://www.python.org/downloads/)
     - After installation, ensure Python is added to your system's `PATH`. You can verify by running:
@@ -81,7 +85,7 @@ These scripts integrate with Python for ASCII art in the terminal, providing a v
 
 ## Usage Instructions
 
-### Compilation Instructions
+### Compilation Instructions (C++ Scripts)
 
 If you're using **Dev C++ 5.11**:
 1. **Install Dev C++ 5.11** from the official website.
@@ -98,4 +102,3 @@ Alternatively, for **command-line compilation**:
    g++ -o folder_creation folder_creation.cpp
    g++ -o cmd_automation cmd_automation.cpp
    g++ -o decibel_calculation decibel_calculation.cpp
-
