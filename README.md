@@ -24,7 +24,7 @@ This repository contains several command-line scripts designed to perform the fo
 2. **CMD Automation Script** (C++): Provides a set of network-related and system diagnostics commands (e.g., cleaning temp files, displaying network parameters, pinging websites, viewing active connections, and displaying system info).
 3. **Decibel Calculation Script**:
    - **C++ Version**: Calculates decibel (dB) values for a set of voltage readings based on a reference voltage.
-   - **Python Version**: A Python alternative for calculating decibel values from a set of input voltages, with similar functionality and output format.
+   
 4. **Unit Conversion Script** (C++): Calculates multiples and submultiples for various physical units (e.g., meter, kilogram, second, etc.), given an input value.
 
 These scripts integrate with Python for ASCII art in the terminal, providing a visually appealing interface.
