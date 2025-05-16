@@ -7,10 +7,9 @@ A collection of C++ and Python command-line tools for automating common system t
 - [Project Overview](#project-overview)
 - [Features](#features)
 - [Requirements](#requirements)
-- [Usage Instructions](#usage-instructions)
-  - [Compilation Instructions](#compilation-instructions)
+- [Usage Instructions](#usage-instructions)  
+  - [Compilation with Visual Studio](#compilation-with-visual-studio)
   - [Python Setup](#python-setup)
-  
 - [License](#license)
 - [Troubleshooting](#troubleshooting)
 
@@ -22,10 +21,8 @@ This repository contains several command-line scripts designed to perform the fo
 
 1. **Folder Creation Script** (C++): Automatically creates a specified number of folders in the current directory.
 2. **CMD Automation Script** (C++): Provides a set of network-related and system diagnostics commands (e.g., cleaning temp files, displaying network parameters, pinging websites, viewing active connections, and displaying system info).
-3. **Decibel Calculation Script**:
-   - **C++ Version**: Calculates decibel (dB) values for a set of voltage readings based on a reference voltage.
-   
-4. **Unit Conversion Script** (C++): Calculates multiples and submultiples for various physical units (e.g., meter, kilogram, second, etc.), given an input value.
+3. **Decibel Calculation Script** (C++): Calculates decibel (dB) values for a set of voltage readings based on a reference voltage.
+4. **Unit Conversion Script** (C++): Calculates multiples and submultiples for various physical units (e.g., meter, kilogram, second, volt, etc.), given an input value.
 
 These scripts integrate with Python for ASCII art in the terminal, providing a visually appealing interface.
 
@@ -34,7 +31,7 @@ These scripts integrate with Python for ASCII art in the terminal, providing a v
 ## Features
 
 ### 1. Folder Creation Script (C++)
-- Allows users to specify the number of folders to create (named `Folder_1`, `Folder_2`, ..., `Folder_n`).
+- Allows users to specify the number of folders to create (`Folder_1`, `Folder_2`, ..., `Folder_n`).
 - Prints success messages in green and error messages in red.
 
 ### 2. CMD Automation Script (C++)
@@ -66,48 +63,52 @@ These scripts integrate with Python for ASCII art in the terminal, providing a v
 ## Requirements
 
 ### Software
-- **C++ Compiler** (for C++ scripts): The scripts are written in C++ and require a C++ compiler to compile and run (e.g., GCC, MinGW, or MSVC).
-- **Dev C++ 5.11**: An Integrated Development Environment (IDE) for C++ development, which includes a built-in GCC compiler. You can use Dev C++ 5.11 to compile and run these scripts.
-  - **Download Dev C++ 5.11**: [Dev C++ Official Website](https://www.bloodshed.net/devcpp.html)
-  - After installing Dev C++ 5.11, you can compile the scripts by opening them within the IDE, then clicking **Execute > Compile & Run**.
-- **Python**: Required for displaying ASCII art using the `pyfiglet` library and running the Python version of the Decibel Calculation script.
-  - **Python Installation**:
-    - Download and install Python from the official website: [Python.org](https://www.python.org/downloads/)
-    - After installation, ensure Python is added to your system's `PATH`. You can verify by running:
-      ```bash
-      python --version
-      ```
-    - This should return the Python version installed on your system.
 
-  - **Install `pyfiglet` module**:
-    - `pyfiglet` is used for ASCII art in the terminal.
-    - Install the module using pip:
-      ```bash
-      pip install pyfiglet
-      ```
+#### C++:
+- **Visual Studio Community Edition 2022**:
+  - Free and supports C++ development with IntelliSense, debugger, and integrated compiler.
+  - **Download**: [Visual Studio 2022](https://visualstudio.microsoft.com/vs/community/)
+  - During installation, select the **"Desktop development with C++"** workload.
+
+#### Python:
+- **Python 3.x**:
+  - Required only for ASCII art generation using `pyfiglet`.
+  - **Download Python**: [python.org](https://www.python.org/downloads/)
+  - After installation, verify with:
+    ```bash
+    python --version
+    ```
+
+- **pyfiglet**:
+  - A library for generating ASCII art text in the terminal.
+  - Install using:
+    ```bash
+    pip install pyfiglet
+    ```
 
 ### Operating System
-- These scripts are designed to run on **Windows** due to the usage of Windows-specific commands like `ipconfig`, `netstat`, and `DEL`.
+- These scripts are designed to run on **Windows** due to the usage of Windows-specific commands like `ipconfig`, `netstat`, `DEL`, and others.
 
 ---
 
 ## Usage Instructions
 
-### Compilation Instructions (C++ Scripts)
+### Compilation with Visual Studio
 
-If you're using **Dev C++ 5.11**:
-1. **Install Dev C++ 5.11** from the official website.
-2. **Open the script** (`folder_creation.cpp`, `cmd_automation.cpp`, `decibel_calculation.cpp`, or `unit_conversion.cpp`) in Dev C++.
-3. **Compile and Run**:
-   - Click **Execute > Compile & Run** from the menu or press `F9` to compile and run the script.
+1. **Open Visual Studio 2022**.
+2. Go to **File > New > Project**.
+3. Select **“Console App (C++)”**.
+4. Name the project (e.g., `FolderCreator`) and click **Create**.
+5. Replace the contents of the `main.cpp` file with the code for the desired script (`folder_creation.cpp`, etc.).
+6. Press **Ctrl + F5** or click **Debug > Start Without Debugging** to compile and run the script.
 
-Alternatively, for **command-line compilation**:
-1. **Ensure a C++ compiler is installed** (e.g., GCC, MinGW, MSVC).
-2. **Save each script** as a `.cpp` file (e.g., `folder_creation.cpp`, `cmd_automation.cpp`, `decibel_calculation.cpp`, `unit_conversion.cpp`).
-3. **Open a terminal** and navigate to the directory where the `.cpp` files are saved.
-4. **Compile the scripts** using the following commands (for GCC):
+> 🔧 You can also add additional `.cpp` files to the project: right-click on the project > **Add > Existing Item...**
+
+---
+
+### Python Setup
+
+1. **Install Python**: Download from [python.org](https://www.python.org) and select the option *"Add Python to PATH"* during installation.
+2. **Verify Installation**:
    ```bash
-   g++ -o folder_creation folder_creation.cpp
-   g++ -o cmd_automation cmd_automation.cpp
-   g++ -o decibel_calculation decibel_calculation.cpp
-   g++ -o unit_conversion unit_conversion.cpp
+   python --version
