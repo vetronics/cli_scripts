@@ -92,6 +92,13 @@ These scripts integrate with Python for ASCII art in the terminal, providing a v
     pip install pyfiglet
     ```
 
+#### Speedtest CLI:
+- **Ookla Speedtest CLI** for network speed testing.
+- On Windows, you can install it easily using `winget`:
+  ```powershell
+  winget install Ookla.Speedtest
+
+
 ### Operating System
 - These scripts are designed to run on **Windows** due to the usage of Windows-specific commands like `ipconfig`, `netstat`, `chkdsk`, and others.
 
