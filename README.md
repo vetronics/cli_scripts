@@ -35,12 +35,18 @@ These scripts integrate with Python for ASCII art in the terminal, providing a v
 - Prints success messages in green and error messages in red.
 
 ### 2. CMD Automation Script (C++)
-- Provides a menu-driven interface to select from five system management tasks:
-  1. **Clean Temporary Files**: Wipes out system temp files.
-  2. **Network Interface Information**: Displays network adapter settings.
-  3. **Ping Command**: Pings a specified domain multiple times.
-  4. **Active Connections**: Displays statistics for active network connections.
-  5. **System Info**: Outputs detailed system information.
+- Menu-driven interface providing these options:  
+  1. **Clean Temporary Files** – runs the system disk cleanup utility.  
+  2. **Network Interface Information** – displays detailed network adapter parameters.  
+  3. **Ping Command** – allows the user to specify the number of ping attempts to a domain.  
+  4. **Active Connections** – shows current active network connections with statistics.  
+  5. **System Info** – outputs detailed system information.  
+  6. **Open Microsoft Support Page** – launches the Microsoft support webpage in the default browser.  
+  7. **Speed Test** – runs a speed test using the Ookla Speedtest CLI tool.  
+  8. **DNS Cache Cleaning** – flushes the DNS resolver cache.  
+  9. **System Integrity Check** – runs the System File Checker tool (`sfc /scannow`).  
+  10. **Disk Health Check** – runs the disk checking utility (`chkdsk`).  
+  11. **Exit** – closes the script.
 
 ### 3. Decibel Calculation Script (C++)
 - **C++ Version**: Computes the decibel (dB) values for a set of voltages using the formula:
@@ -87,7 +93,7 @@ These scripts integrate with Python for ASCII art in the terminal, providing a v
     ```
 
 ### Operating System
-- These scripts are designed to run on **Windows** due to the usage of Windows-specific commands like `ipconfig`, `netstat`, `DEL`, and others.
+- These scripts are designed to run on **Windows** due to the usage of Windows-specific commands like `ipconfig`, `netstat`, `chkdsk`, and others.
 
 ---
 
