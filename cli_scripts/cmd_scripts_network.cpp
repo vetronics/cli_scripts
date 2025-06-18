@@ -1,5 +1,6 @@
 
 // import libraries 
+
 #include <iostream>
 #include <cstdlib>
 #include <string>
@@ -21,7 +22,8 @@ int main(int argc, char** argv) {
     */
     int vm, i, choice, c;
 
-    string options[12] = {
+    string options[13] = {
+
         "option 1 : wipe out temp files",
         "option 2 : network interface card parameters",
         "option 3 : command ping",
@@ -32,12 +34,15 @@ int main(int argc, char** argv) {
         "option 8 : clear dns",
         "option 9 : integrity of system",
         "option 10 : check disk",
-        "option 11  : exit by script"
+        "option 11  :upgrade system by winget",
+        "option 12 : exit by program "
+
+
     };
 
     printf("Should you insert what you want to do? \n\n");
 
-    for (c = 0; c < 12; c++) {
+    for (c = 0; c < 13; c++) {
         cout << "\n" << options[c] << "\n";
     }
 
@@ -101,6 +106,11 @@ int main(int argc, char** argv) {
             break;
 
         case 11:
+            printf("upgrade softweres \n");
+            system("winget upgrade --all");
+            break;
+
+        case 12:
             printf("exit by program \n\n");
             system("exit");
             break;
@@ -110,7 +120,7 @@ int main(int argc, char** argv) {
             break;
         }
 
-    } while (choice >= 1 && choice <= 10);
+    } while (choice >= 1 && choice < 12);
 
     system("pause>nul");
     return 0;
