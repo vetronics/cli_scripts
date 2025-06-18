@@ -45,8 +45,9 @@ These scripts integrate with Python for ASCII art in the terminal, providing a v
   7. **Speed Test** – runs a speed test using the Ookla Speedtest CLI tool.  
   8. **DNS Cache Cleaning** – flushes the DNS resolver cache.  
   9. **System Integrity Check** – runs the System File Checker tool (`sfc /scannow`).  
-  10. **Disk Health Check** – runs the disk checking utility (`chkdsk`).  
-  11. **Exit** – closes the script.
+  10. **Disk Health Check** – runs the disk checking utility (`chkdsk`).
+  11. **winget upgrade** uses Winget tool to upgrade all software packages  installed on PC  
+  12. **Exit** – closes the script.
 
 ### 3. Decibel Calculation Script (C++)
 - **C++ Version**: Computes the decibel (dB) values for a set of voltages using the formula:
