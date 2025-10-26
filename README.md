@@ -19,10 +19,10 @@ A collection of C++ and Python command-line tools for automating common system t
 
 This repository contains several command-line scripts designed to perform the following tasks:
 
-1. **Folder Creation Script** (C++): Automatically creates a specified number of folders in the current directory.
-2. **CMD Automation Script** (C++): Provides a set of network-related and system diagnostics commands (e.g., cleaning temp files, displaying network parameters, pinging websites, viewing active connections, and displaying system info).
-3. **Decibel Calculation Script** (C++): Calculates decibel (dB) values for a set of voltage readings based on a reference voltage.
-4. **Unit Conversion Script** (C++): Calculates multiples and submultiples for various physical units (e.g., meter, kilogram, second, volt, etc.), given an input value.
+
+1. **CMD Automation Script** (C++): Provides a set of network-related and system diagnostics commands (e.g., cleaning temp files, displaying network parameters, pinging websites, viewing active connections, and displaying system info).
+2. **Decibel Calculation Script** (C++): Calculates decibel (dB) values for a set of voltage readings based on a reference voltage.
+3. **Unit Conversion Script** (C++): Calculates multiples and submultiples for various physical units (e.g., meter, kilogram, second, volt, etc.), given an input value.
 
 These scripts integrate with Python for ASCII art in the terminal, providing a visually appealing interface.
 
@@ -30,11 +30,7 @@ These scripts integrate with Python for ASCII art in the terminal, providing a v
 
 ## Features
 
-### 1. Folder Creation Script (C++)
-- Allows users to specify the number of folders to create (`Folder_1`, `Folder_2`, ..., `Folder_n`).
-- Prints success messages in green and error messages in red.
-
-### 2. CMD Automation Script (C++)
+### 1. CMD Automation Script (C++)
 - Menu-driven interface providing these options:  
   1. **Clean Temporary Files** – runs the system disk cleanup utility.  
   2. **Network Interface Information** – displays detailed network adapter parameters.  
@@ -49,14 +45,14 @@ These scripts integrate with Python for ASCII art in the terminal, providing a v
   11. **winget upgrade** uses Winget tool to upgrade all software packages  installed on PC  
   12. **Exit** – closes the script.
 
-### 3. Decibel Calculation Script (C++)
+### 2. Decibel Calculation Script (C++)
 - **C++ Version**: Computes the decibel (dB) values for a set of voltages using the formula:
   \[
   \text{dB} = 20 \times \log_{10} \left(\frac{V_{\text{max}}}{V_{\text{input}}}\right)
   \]
   Prompts the user for a reference voltage, then processes 21 voltage values to calculate and display corresponding dB values.
 
-### 4. Unit Conversion Script (C++)
+### 3. Unit Conversion Script (C++)
 - **Functionality**: This script helps in converting units and calculating multiples and submultiples for a given unit.
   - The user is prompted to choose a physical unit from a list (e.g., meter, kilogram, second, volt, etc.).
   - After choosing the unit, the user is asked to input a reference value for the unit.
